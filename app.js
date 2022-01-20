@@ -23,15 +23,11 @@ document.addEventListener('DOMContentLoaded', e => {
 rowCard.addEventListener('click', e => { addProduct(e) })
 items.addEventListener('click', e => { fnAcc(e) });
 
-
-
 const fetchData = async () => {
     const res = await fetch('api.json');
     const data = await res.json();
     drawCards(data);
 }
-
-
 
 const drawCards = (data) => {
     data.forEach(product => {
@@ -140,4 +136,3 @@ const fnAcc = e => {
 
     e.stopPropagation();
 }
-
